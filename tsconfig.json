@@ -9,6 +9,7 @@
     "isolatedModules": true,
     "outDir": "lib",
     "baseUrl": ".",
+    "sourceMap": true,
     "paths": {
       "@/*": ["src/*"]
     }
