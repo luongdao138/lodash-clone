@@ -1,8 +1,8 @@
-import toNumber from './toNumber';
+import { toNumber } from './toNumber';
 
 const MAX_INTEGER = 1.7976931348623157e308;
 
-export default function toFinite(value: any): number {
+export function toFinite(value: any): number {
   if (!value) return value === 0 ? value : 0;
 
   value = toNumber(value);

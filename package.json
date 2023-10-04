@@ -7,12 +7,14 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "check:types": "tsc --noEmit",
     "lint": "eslint -c .eslintrc.js --fix .",
     "build": "rm -rf lib && tsc --project tsconfig.json",
     "start:watch": "nodemon --watch \"./src/*\" --ext \"ts,js\" --exec \"yarn build && node lib/index.js\""
   },
   "devDependencies": {
+    "@types/jest": "^29.5.5",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "dotenv-webpack": "^8.0.1",
@@ -20,8 +22,10 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.3",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   },
   "files": [

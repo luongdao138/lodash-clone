@@ -1,5 +1,5 @@
-import isObject from './isObject';
-import isSymbol from './isSymbol';
+import { isObject } from './isObject';
+import { isSymbol } from './isSymbol';
 
 /** Used as references for various `Number` constants. */
 const NAN = 0 / 0;
@@ -39,7 +39,7 @@ const freeParseInt = parseInt;
  * toNumber('3.2')
  * // => 3.2
  */
-export default function toNumber(value: any): number {
+export function toNumber(value: any): number {
   if (typeof value === 'number') {
     return value;
   }
