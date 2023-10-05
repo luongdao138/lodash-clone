@@ -31,4 +31,12 @@ describe('chunk', () => {
 
     expect(actual).toEqual(expected);
   });
+
+  it('should ensure mininum `size` is 0', () => {
+    expect(chunk(array, -4)).toEqual([]);
+  });
+
+  it('should coerce `size` to an integer', () => {
+    expect(chunk(array, array.length / 4)).toEqual([[1], [2], [3], [4], [5], [6]]);
+  });
 });

@@ -5,6 +5,12 @@ export function chunk(items: any[], size: any = 1) {
   let acc: any[] = [];
   const result: any[] = [];
 
+  // min = 0
+  size = Math.max(toInteger(size), 0);
+  const length = items ? items.length : 0;
+
+  if (!length || !size) return [];
+
   // if pass size as a falsy value (except undefined) => treat as 0
   // if pass size < 0 return 0
   size = Math.max(toInteger(size), 0);
